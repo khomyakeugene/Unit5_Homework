@@ -7,13 +7,15 @@ import com.company.utils.Utils;
  */
 public class ArrayInvestigation {
     public static final String ARRAY_IS_EMPTY_MESSAGE = "Array is empty!";
-    protected enum ConditionType {MIN_VALUE, MAX_VALUE};
+    protected enum ConditionType {MIN_VALUE, MAX_VALUE}; //ненужные символы ИДЕА подсказывает.
 
-    public static void trowArrayIsEmptyException() throws Exception {
+    public static void trowArrayIsEmptyException() throws Exception { //ошибка в первом слове наименования метода
         String methodName = Utils.getFullMethodName();
 
         Utils.throwTextException(methodName, ARRAY_IS_EMPTY_MESSAGE);
-    }
+    } //Что-то мне показалось запутанным так использовать исключения. Почему бы просто не вызывать стандартные, обрабатывать их где надо.
+    // А если нужен кастомный, то создать его отдельным классом, где и принимать нужный месседж для выведения в консоль.
+    //Сам стектрейс будет и так показывать класс и метод, где случился эксепшн.
 
     protected static int getValueByCondition(int[] data, ConditionType conditionType) throws Exception {
         int resultValue = (conditionType == ConditionType.MIN_VALUE) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
@@ -21,7 +23,7 @@ public class ArrayInvestigation {
 
         if (arrayLength > 0) {
             resultValue = data[0];
-            for (int i = 0; i < arrayLength; i++) {
+            for (int i = 0; i < arrayLength; i++) { //ИДЕА предлагает использовать цикл for-each
                 // Use the "switch" here only as an occasion to show "traditional method" of using the "enum type"
                 switch (conditionType) {
                     case MIN_VALUE:

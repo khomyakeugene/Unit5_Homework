@@ -6,7 +6,7 @@ import java.text.MessageFormat;
  * Created by Yevgen on 03.01.2016.
  */
 public class Utils {
-    public final static int LETS_THINK_THIS_IS_THE_NUMBER_OF_CURRENT_ELEMENT_OF_STACK = 1;
+    public final static int LETS_THINK_THIS_IS_THE_NUMBER_OF_CURRENT_ELEMENT_OF_STACK = 1; //опять множество неиспользуемых методов и переменных
     public final static int LETS_THINK_THIS_IS_THE_NUMBER_OF_CALLING_ELEMENT_OF_STACK = 2;
 
     public final static String CLASS_NAME_PATTERN = "Class Name: {0}";

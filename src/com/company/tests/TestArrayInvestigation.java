@@ -15,11 +15,13 @@ public class TestArrayInvestigation {
     public static final String MAX_VALUE_PATTERN = "Maximum value: {0}";
     public static final String SORTED_TEST_DATA_PATTERN = "Sorted test data: {0}";
 
-    public static final int[] TEST_DATA = {17, 1, 2, 4, -78, 23, 5, 8, 12};
+    //public static final int[] TEST_DATA = {17, 1, 2, 4, -78, 23, 5, 8, 12};
     // Reserve this "empty example" here to have the possibility to demonstrate "extreme case"
-    // public static final int[] TEST_DATA = {};
+    public static final int[] TEST_DATA = {};
 
-    public void demonstrateGetMinValue() throws Exception {
+    public void demonstrateGetMinValue() throws Exception { //почему называется getMinValue, а реально проводит три операции
+        //getMinValue, getMaxValue, sort. И их все-таки лучше разделить на отдельные методы
+
         // Show source array
         Utils.writeMessage(MessageFormat.format(TEST_DATA_PATTERN, Arrays.toString(TEST_DATA)));
 
