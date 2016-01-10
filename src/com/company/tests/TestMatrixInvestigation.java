@@ -73,7 +73,7 @@ public class TestMatrixInvestigation {
         writeMatrix(thirdMatrix, MessageFormat.format(SOURCE_MATRIX_PATTERN, THIRD_MESSAGE));
     }
 
-    public void demonstrateMatrixInvestigation() throws Exception {
+    public void demonstrateMatrixInvestigation() {
         // Prepare test data
         initData();
         // Show source data

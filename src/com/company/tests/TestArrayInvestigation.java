@@ -19,16 +19,21 @@ public class TestArrayInvestigation {
     // Reserve this "empty example" here to have the possibility to demonstrate "extreme case"
     // public static final int[] TEST_DATA = {};
 
-    public void demonstrateArrayInvestigation() throws Exception {
-        // Show source array
-        Utils.writeMessage(MessageFormat.format(TEST_DATA_PATTERN, Arrays.toString(TEST_DATA)));
+    public void demonstrateArrayInvestigation() {
+        try {
+            // Show source array
+            Utils.writeMessage(MessageFormat.format(TEST_DATA_PATTERN, Arrays.toString(TEST_DATA)));
 
-        // Get minimum value from array and show it
-        demonstrateGetMinValue();
-        // Get maximum value from array and show it
-        demonstrateGetMaxValue();
-        // Sorting of array and show sorted array
-        demonstrateSort();
+            // Get minimum value from array and show it
+            demonstrateGetMinValue();
+            // Get maximum value from array and show it
+            demonstrateGetMaxValue();
+            // Sorting of array and show sorted array
+            demonstrateSort();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void demonstrateGetMinValue() throws Exception {
