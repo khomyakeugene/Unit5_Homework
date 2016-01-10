@@ -32,7 +32,9 @@ public class TestMatrixInvestigation {
             for (int j = 0; j < matrix[i].length; j++) {
                 matrix[i][j] = Math.round((Math.random() * UPPER_LIMIT) * decimalPower) / decimalPower;
                 // Add possible negative sign
-                if (Math.random() < NEGATIVE_RELATIVE_DENSITY) matrix[i][j] = -matrix[i][j];
+                if (Math.random() < NEGATIVE_RELATIVE_DENSITY) {
+                    matrix[i][j] = -matrix[i][j];
+                }
             }
         }
 
