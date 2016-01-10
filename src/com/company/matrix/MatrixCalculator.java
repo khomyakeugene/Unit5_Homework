@@ -24,20 +24,40 @@ public class MatrixCalculator {
         }
     }
 
-    public static double[][] add(double[][] firstOperand, double[][] secondOperand, int decimalPrecision) {
+    public static double round(double value, double decimalPower) {
+        return Math.round(value  * decimalPower) / decimalPower;
+    }
+
+    private static double[][] addOrSub(double[][] firstOperand, double[][] secondOperand, int decimalPrecision, boolean isAddition) {
         // Check two matrix size equality
         checkMatrixSizeEquality(firstOperand, secondOperand);
 
         double[][] result = new double[firstOperand.length][firstOperand[0].length];
+
         double decimalPower = Math.pow(10, decimalPrecision);
         for (int i = 0; i < result.length; i++) {
             for (int j = 0; j < result[i].length; j++) {
-                result[i][j] = Math.round((firstOperand[i][j] + secondOperand[i][j]) * decimalPower) / decimalPower;
+                result[i][j] = round(isAddition ? (firstOperand[i][j] + secondOperand[i][j]) :
+                        (firstOperand[i][j] - secondOperand[i][j]), decimalPower);
             }
         }
 
         return result;
     }
+
+    public static double[][] add(double[][] firstOperand, double[][] secondOperand, int decimalPrecision) {
+        return addOrSub(firstOperand, secondOperand, decimalPrecision, true);
+    }
+
+    public static double[][] sub(double[][] firstOperand, double[][] secondOperand, int decimalPrecision) {
+        return addOrSub(firstOperand, secondOperand, decimalPrecision, false);
+    }
+
+
+    public static double[][] mul(double[][] firstOperand, double[][] secondOperand, int decimalPrecision) {
+        return null;
+    }
+
 }
 
 

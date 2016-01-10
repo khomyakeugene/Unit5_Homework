@@ -14,6 +14,7 @@ public class TestMatrixInvestigation {
     public final static String FIRST_MESSAGE = "first";
     public final static String SECOND_MESSAGE = "second";
     public final static String SUM_OF_TWO_MATRIX_MESSAGE = "The sum of two matrices:";
+    public final static String DIFFERENCE_OF_TWO_MATRIX_MESSAGE = "The difference of two matrices:";
 
     public static final int MATRIX_WIDTH = 4;
     public static final int MATRIX_HEIGHT = 3;
@@ -30,7 +31,7 @@ public class TestMatrixInvestigation {
         double decimalPower = Math.pow(10, DECIMAL_PRECISION);
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = Math.round((Math.random() * UPPER_LIMIT) * decimalPower) / decimalPower;
+                matrix[i][j] = MatrixCalculator.round(Math.random() * UPPER_LIMIT, decimalPower);
                 // Add possible negative sign
                 if (Math.random() < NEGATIVE_RELATIVE_DENSITY) {
                     matrix[i][j] = -matrix[i][j];
@@ -69,6 +70,8 @@ public class TestMatrixInvestigation {
 
         // Show sum of two matrices
         demonstrateMatrixSum();
+        // Show difference of two matrices
+        demonstrateMatrixDifference();
     }
 
     // Show sum of two matrices
@@ -76,4 +79,11 @@ public class TestMatrixInvestigation {
         // Sum of two matrices
         writeMatrix(MatrixCalculator.add(firstMatrix, secondMatrix, DECIMAL_PRECISION), SUM_OF_TWO_MATRIX_MESSAGE);
     }
+
+    // Show difference of two matrices
+    public void demonstrateMatrixDifference() {
+        // Difference of two matrices
+        writeMatrix(MatrixCalculator.sub(firstMatrix, secondMatrix, DECIMAL_PRECISION), DIFFERENCE_OF_TWO_MATRIX_MESSAGE);
+    }
+
 }
