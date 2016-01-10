@@ -7,9 +7,9 @@ import com.company.utils.Utils;
  */
 public class ArrayInvestigation {
     public static final String ARRAY_IS_EMPTY_MESSAGE = "Array is empty!";
-    protected enum ConditionType {MIN_VALUE, MAX_VALUE}; //ненужные символы ИДЕА подсказывает.
+    protected enum ConditionType {MIN_VALUE, MAX_VALUE}
 
-    public static void trowArrayIsEmptyException() throws Exception { //ошибка в первом слове наименования метода
+    public static void throwArrayIsEmptyException() throws Exception {
         String methodName = Utils.getFullMethodName();
 
         Utils.throwTextException(methodName, ARRAY_IS_EMPTY_MESSAGE);
@@ -19,29 +19,28 @@ public class ArrayInvestigation {
 
     protected static int getValueByCondition(int[] data, ConditionType conditionType) throws Exception {
         int resultValue = (conditionType == ConditionType.MIN_VALUE) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
-        int arrayLength = data.length;
 
-        if (arrayLength > 0) {
+        if (data.length > 0) {
             resultValue = data[0];
-            for (int i = 0; i < arrayLength; i++) { //ИДЕА предлагает использовать цикл for-each
+            for (int element: data) {
                 // Use the "switch" here only as an occasion to show "traditional method" of using the "enum type"
                 switch (conditionType) {
                     case MIN_VALUE:
-                        if (data[i] < resultValue) {
-                            resultValue = data[i];
+                        if (element < resultValue) {
+                            resultValue = element;
                         }
                         break;
 
                     case MAX_VALUE:
-                        if (data[i] > resultValue) {
-                            resultValue = data[i];
+                        if (element > resultValue) {
+                            resultValue = element;
                         }
                         break;
                 }
             }
         }
         else {
-            trowArrayIsEmptyException();
+            throwArrayIsEmptyException();
         }
 
         return resultValue;
