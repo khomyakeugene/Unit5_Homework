@@ -24,10 +24,24 @@ public class TestArrayInvestigation {
         Utils.writeMessage(MessageFormat.format(TEST_DATA_PATTERN, Arrays.toString(TEST_DATA)));
 
         // Get minimum value from array and show it
+        demonstrateGetMinValue();
+        // Get maximum value from array and show it
+        demonstrateGetMaxValue();
+        // Sorting of array and show sorted array
+        demonstrateSort();
+    }
+
+    public void demonstrateGetMinValue() throws Exception {
+        // Get minimum value from array and show it
         Utils.writeMessage(MessageFormat.format(MIN_VALUE_PATTERN, ArrayInvestigation.getMinValue(TEST_DATA)));
+    }
+
+    public void demonstrateGetMaxValue() throws Exception {
         // Get maximum value from array and show it
         Utils.writeMessage(MessageFormat.format(MAX_VALUE_PATTERN, ArrayInvestigation.getMaxValue(TEST_DATA)));
+    }
 
+    public void demonstrateSort() throws Exception {
         // Sorting of array
         ArrayInvestigation.sort(TEST_DATA);
         // Show sorted array
