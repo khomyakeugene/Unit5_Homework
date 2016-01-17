@@ -5,10 +5,10 @@ import com.company.tests.TestMatrixInvestigation;
 
 public class Main {
     public static void main(String[] args) {
-        // Main task of 5th Unit
+        // Main task of Unit 5
         new TestArrayInvestigation().demonstrateArrayInvestigation();
 
-        // Additional task of 5th Unit
+        // Additional task of Unit 5
         new TestMatrixInvestigation().demonstrateMatrixInvestigation();
     }
 }
