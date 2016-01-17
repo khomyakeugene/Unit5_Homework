@@ -122,7 +122,7 @@ public class TestMatrixInvestigation {
     // Show transposition of matrix
     public void demonstrateMatrixTransposition() {
         // Transposition of matrix
-        writeMatrix(MatrixCalculator.transpose(firstMatrix, DECIMAL_PRECISION),
+        writeMatrix(MatrixCalculator.transpose(firstMatrix),
                 MessageFormat.format(TRANSPOSE_MATRIX_PATTERN, FIRST_MESSAGE));
     }
 
