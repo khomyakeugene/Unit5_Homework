@@ -59,10 +59,10 @@ public class TestMatrixInvestigation {
     }
 
     public void writeMatrix(double[][] matrix, String header) {
-        Utils.writeMessage(header);
+        Utils.printMessage(header);
 
         for (double[] line: matrix) {
-            Utils.writeMessage(Arrays.toString(line));
+            Utils.printMessage(Arrays.toString(line));
         }
     }
 

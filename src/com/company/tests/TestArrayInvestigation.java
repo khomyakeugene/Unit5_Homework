@@ -22,7 +22,7 @@ public class TestArrayInvestigation {
     public void demonstrateArrayInvestigation() {
         try {
             // Show source array
-            Utils.writeMessage(MessageFormat.format(TEST_DATA_PATTERN, Arrays.toString(TEST_DATA)));
+            Utils.printMessage(MessageFormat.format(TEST_DATA_PATTERN, Arrays.toString(TEST_DATA)));
 
             // Get minimum value from array and show it
             demonstrateGetMinValue();
@@ -38,18 +38,18 @@ public class TestArrayInvestigation {
 
     public void demonstrateGetMinValue() throws Exception {
         // Get minimum value from array and show it
-        Utils.writeMessage(MessageFormat.format(MIN_VALUE_PATTERN, ArrayInvestigation.getMinValue(TEST_DATA)));
+        Utils.printMessage(MessageFormat.format(MIN_VALUE_PATTERN, ArrayInvestigation.getMinValue(TEST_DATA)));
     }
 
     public void demonstrateGetMaxValue() throws Exception {
         // Get maximum value from array and show it
-        Utils.writeMessage(MessageFormat.format(MAX_VALUE_PATTERN, ArrayInvestigation.getMaxValue(TEST_DATA)));
+        Utils.printMessage(MessageFormat.format(MAX_VALUE_PATTERN, ArrayInvestigation.getMaxValue(TEST_DATA)));
     }
 
     public void demonstrateSort() throws Exception {
         // Sorting of array
         ArrayInvestigation.sort(TEST_DATA);
         // Show sorted array
-        Utils.writeMessage(MessageFormat.format(SORTED_TEST_DATA_PATTERN, Arrays.toString(TEST_DATA)));
+        Utils.printMessage(MessageFormat.format(SORTED_TEST_DATA_PATTERN, Arrays.toString(TEST_DATA)));
     }
 }
