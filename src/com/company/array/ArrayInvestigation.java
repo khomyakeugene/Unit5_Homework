@@ -13,9 +13,7 @@ public class ArrayInvestigation {
         String methodName = Utils.getFullMethodName();
 
         Utils.throwTextException(methodName, ARRAY_IS_EMPTY_MESSAGE);
-    } //Что-то мне показалось запутанным так использовать исключения. Почему бы просто не вызывать стандартные, обрабатывать их где надо.
-    // А если нужен кастомный, то создать его отдельным классом, где и принимать нужный месседж для выведения в консоль.
-    //Сам стектрейс будет и так показывать класс и метод, где случился эксепшн.
+    }
 
     protected static int getValueByCondition(int[] data, ConditionType conditionType) throws Exception {
         int resultValue = (conditionType == ConditionType.MIN_VALUE) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
