@@ -1,8 +1,8 @@
 package com.company.matrix;
 
-import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -37,7 +37,7 @@ public class MatrixCalculatorTest {
         assertEquals(MatrixCalculator.getMatrixHeight(expected), MatrixCalculator.getMatrixHeight(actual));
 
         for (int i = 0; i < expected.length; i++) {
-            Assert.assertArrayEquals(expected[i], actual[i], 0.0);
+            assertArrayEquals(expected[i], actual[i], 0.0);
         }
     }
 
