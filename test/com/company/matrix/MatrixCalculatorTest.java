@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
  * Created by Yevgen on 02.02.2016 as a part of the project "Unit5_Homework".
  */
 public class MatrixCalculatorTest {
-    public static final int DECIMAL_PRECISION = 2; // fffff
+    public static final int DECIMAL_PRECISION = 2;
     final static double[][] firstMatrix =
             {{1.68, -0.55, 4.85, 4.77}, {4.25, 5.28, 2.41, 9.08}, {4.59, 5.25, 1.22, 1.94}};
     final static double[][] secondMatrix =
