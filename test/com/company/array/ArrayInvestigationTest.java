@@ -16,23 +16,23 @@ public class ArrayInvestigationTest {
     public void testGetMaxValue() throws Exception {
         final Integer result = ArrayInvestigation.getMaxValue(sourceArray);
 
-        final Integer expectedResult = 23;
-        assertEquals(expectedResult, result);
+        final Integer expected = 23;
+        assertEquals(expected, result);
     }
 
     @Test(timeout = 1000)
     public void testGetMinValue() throws Exception {
         final Integer result = ArrayInvestigation.getMinValue(sourceArray);
 
-        final Integer expectedResult = -78;
-        assertEquals(expectedResult, result);
+        final Integer expected = -78;
+        assertEquals(expected, result);
     }
 
     @Test (timeout = 1000)
     public void testSort() throws Exception {
-        final int[] sortedArray = {-78, 1, 2, 4, 5, 8, 12, 17, 23};
-
         ArrayInvestigation.sort(sourceArray);
-        assertArrayEquals(sortedArray, sourceArray);
+
+        final int[] expected = {-78, 1, 2, 4, 5, 8, 12, 17, 23};
+        assertArrayEquals(expected, sourceArray);
     }
 }

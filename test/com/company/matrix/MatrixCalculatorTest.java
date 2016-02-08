@@ -50,24 +50,24 @@ public class MatrixCalculatorTest {
     public void testGetMatrixHeight() throws Exception {
         final Integer result = MatrixCalculator.getMatrixHeight(firstMatrix);
 
-        final Integer expectedResult = 3;
-        assertEquals(expectedResult, result);
+        final Integer expected = 3;
+        assertEquals(expected, result);
     }
 
     @Test(timeout = 1000)
     public void testGetMatrixWidth() throws Exception {
         final Integer result = MatrixCalculator.getMatrixWidth(secondMatrix);
 
-        final Integer expectedResult = 4;
-        assertEquals(expectedResult, result);
+        final Integer expected = 4;
+        assertEquals(expected, result);
     }
 
     @Test(expected = IllegalArgumentException.class, timeout = 1000)
     public void testGetMatrixWidthIllegalDataCheck() throws Exception {
         final Integer result = MatrixCalculator.getMatrixWidth(fourthMatrix);
 
-        final Integer expectedResult = 4;
-        assertEquals(expectedResult, result);
+        final Integer expected = 4;
+        assertEquals(expected, result);
     }
 
 
@@ -87,8 +87,8 @@ public class MatrixCalculatorTest {
         final double decimalPower = 100.0;
         final Double result = MatrixCalculator.round(value, decimalPower);
 
-        final Double expectedResult = 10.24;
-        assertEquals(expectedResult, result);
+        final Double expected = 10.24;
+        assertEquals(expected, result);
 
     }
 
